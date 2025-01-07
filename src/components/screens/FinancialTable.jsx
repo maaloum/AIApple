@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Loading from "./Loading"; // Fix typo (Loding -> Loading)
+import Loading from "./Loading"; 
 import Error from "./Error";
 import { fetchData, setFilters } from "../../features/data/data";
 
@@ -16,7 +16,6 @@ const FinancialTable = () => {
     dispatch(fetchData());
   }, [dispatch]);
 
-  // Apply filters logic
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     dispatch(setFilters({ [name]: value }));
@@ -45,7 +44,6 @@ const FinancialTable = () => {
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4 text-secondary">Financial Data</h1>
 
-      {/* Filters */}
       <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700">
@@ -126,8 +124,6 @@ const FinancialTable = () => {
       >
         Apply Filters
       </button> */}
-
-      {/* Table */}
       <div className="overflow-x-auto mt-4">
         <table className="min-w-full table-auto border-collapse border border-gray-300">
           <thead>
