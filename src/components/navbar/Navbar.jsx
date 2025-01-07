@@ -8,12 +8,12 @@ export default function Navbar() {
     <div className="navbar">
       <nav>
         <div className="max-w-7xl mx-auto">
-          <div className="flex mx-auto justify-between w-4/6  ">
+          <div className="flex mx-auto justify-between w-4/6">
             <div className="flex items-center gap-10 my-12">
               <div>
                 <a
                   href="/"
-                  className="flex gap-1 font-bold text-gray-700 items-center "
+                  className="flex gap-1 font-bold text-gray-700 items-center"
                 >
                   <img
                     src="/logo.png"
@@ -22,13 +22,25 @@ export default function Navbar() {
                   />
                 </a>
               </div>
-              <div className="hidden lg:flex gap-8 ">
-                <a href="#">About</a>
-                <a href="#">Features</a>
-                <a href="#">Price</a>
-                <a href="#">Demo</a>
-                <a href="#">Book</a>
-                <a href="#">FAQ</a>
+              <div className="hidden lg:flex gap-8">
+                <a href="/" className="hover:text-primary">
+                  About
+                </a>
+                <a href="/" className="hover:text-primary">
+                  Features
+                </a>
+                <a href="/" className="hover:text-primary">
+                  Price
+                </a>
+                <a href="/" className="hover:text-primary">
+                  Demo
+                </a>
+                <a href="/" className="hover:text-primary">
+                  Book
+                </a>
+                <a href="/" className="hover:text-primary">
+                  FAQ
+                </a>
               </div>
             </div>
             <div className="flex gap-6">
@@ -51,19 +63,33 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu */}
         <div
-          className={`fixed z-40 w-full  bg-gray-100 overflow-hidden flex flex-col lg:hidden gap-12  origin-top duration-700 ${
-            !toggleMenu ? "h-0" : "h-full"
-          }`}
+          className={`fixed z-40 w-full bg-gray-100 overflow-hidden flex flex-col lg:hidden gap-12 origin-top duration-700 ${
+            toggleMenu ? "h-full" : "h-0"
+          } transition-all duration-300`}
         >
           <div className="px-8">
             <div className="flex flex-col gap-8 font-bold tracking-wider">
-              <a href="/">About</a>
-              <a href="/">Features</a>
-              <a href="/">Price</a>
-              <a href="/">Demo</a>
-              <a href="/">Book</a>
-              <a href="/">FAQ</a>
+              <a href="/" className="hover:text-primary">
+                About
+              </a>
+              <a href="/" className="hover:text-primary">
+                Features
+              </a>
+              <a href="/" className="hover:text-primary">
+                Price
+              </a>
+              <a href="/" className="hover:text-primary">
+                Demo
+              </a>
+              <a href="/" className="hover:text-primary">
+                Book
+              </a>
+              <a href="/" className="hover:text-primary">
+                FAQ
+              </a>
             </div>
           </div>
         </div>
