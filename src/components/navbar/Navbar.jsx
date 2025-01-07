@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { MoonIcon, SunIcon, Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className="app">
+    <div className="navbar">
       <nav>
         <div className="max-w-7xl mx-auto">
           <div className="flex mx-auto justify-between w-4/6  ">
@@ -22,7 +22,6 @@ export default function Navbar() {
                   />
                 </a>
               </div>
-              {/* primary */}
               <div className="hidden lg:flex gap-8 ">
                 <a href="#">About</a>
                 <a href="#">Features</a>
@@ -39,12 +38,11 @@ export default function Navbar() {
                     Sign Up
                   </button>
 
-                  <button className="hidden sm:inline-block bg-white text-gray-600 border border-secondary hover:bg-gray hover:text-secondary hover:border-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-900 font-bold py-2 px-6 rounded-lg">
+                  <button className="hidden md:inline-block bg-white text-gray-600 border border-secondary hover:bg-gray hover:text-secondary hover:border-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-900 font-bold py-2 px-6 rounded-lg">
                     Sign In
                   </button>
                 </div>
               </div>
-              {/* Mobile navigation toggle */}
               <div className="lg:hidden flex items-center">
                 <button onClick={() => setToggleMenu(!toggleMenu)}>
                   <Bars3Icon className="h-6" />
@@ -53,7 +51,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        {/* mobile navigation */}
         <div
           className={`fixed z-40 w-full  bg-gray-100 overflow-hidden flex flex-col lg:hidden gap-12  origin-top duration-700 ${
             !toggleMenu ? "h-0" : "h-full"
