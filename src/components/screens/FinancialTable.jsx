@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Loading from "./Loading"; 
+import Loading from "./Loading";
 import Error from "./Error";
 import { fetchData, setFilters } from "../../features/data/data";
 
@@ -41,10 +41,12 @@ const FinancialTable = () => {
   }
 
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold mb-4 text-secondary">Financial Data</h1>
+    <div className=" p-4 ">
+      <h1 className="text-xl font-bold mb-4 text-secondary text-center">
+        Financial Data
+      </h1>
 
-      <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mb-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-zinc-500 p-3 rounded-lg ">
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Start Date
@@ -54,7 +56,7 @@ const FinancialTable = () => {
             name="startDate"
             value={filters.startDate || ""}
             onChange={handleFilterChange}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm"
           />
         </div>
         <div>
@@ -66,7 +68,7 @@ const FinancialTable = () => {
             name="endDate"
             value={filters.endDate || ""}
             onChange={handleFilterChange}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm"
           />
         </div>
         <div>
@@ -78,7 +80,7 @@ const FinancialTable = () => {
             name="minRevenue"
             value={filters?.minRevenue || ""}
             onChange={handleFilterChange}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+            className="mt-1 block p-2 w-full border-gray-300 rounded-md shadow-sm"
           />
         </div>
         <div>
@@ -90,7 +92,7 @@ const FinancialTable = () => {
             name="maxRevenue"
             value={filters?.maxRevenue || ""}
             onChange={handleFilterChange}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm"
           />
         </div>
         <div>
@@ -102,7 +104,7 @@ const FinancialTable = () => {
             name="minNetIncome"
             value={filters?.minNetIncome || ""}
             onChange={handleFilterChange}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm"
           />
         </div>
         <div>
@@ -114,7 +116,7 @@ const FinancialTable = () => {
             name="maxNetIncome"
             value={filters?.maxNetIncome || ""}
             onChange={handleFilterChange}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+            className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm"
           />
         </div>
       </div>
